@@ -5,7 +5,7 @@ Example is taken and adapted from the [node-oidc-provider](https://github.com/pa
 Do a `npm install`. Install mongodb (or change to a different adapter) and set that up.
 
 In `support/configuration.js` we need to create a new client:
-```json
+```js
     {
       client_id: 'f0fd57814c6670254e65510947a06656da6c5b299e98793b8cf1fe095461d9cd',
       client_secret: '26df92eef53fd8cf4554490b81090df591f16738891a2b8cd70bee1b58644385',
@@ -19,7 +19,7 @@ The `CLIENT_ID` and `CLIENT_SECRET` you generate yourself. They can be any strin
 For `redirect_uris` the documentation is [here](https://developers.google.com/assistant/smarthome/develop/implement-oauth#handle_authorization_requests). Specifically point 4:
 > Confirm that the URL specified by the redirect_uri parameter has the following form:
 > 
-> https://oauth-redirect.googleusercontent.com/r/YOUR_PROJECT_ID
+> https://oauth-redirect.googleusercontent.com/r/YOUR_PROJECT_ID  
 > https://oauth-redirect-sandbox.googleusercontent.com/r/YOUR_PROJECT_ID
 
 You get the `PROJECT_ID` from your [Google Actions Console](https://console.actions.google.com/u/0/), open the project you want and copy the `PROJECT_ID` from the url.
@@ -36,7 +36,7 @@ If using MongoDB, start the server with `MONGODB_URI=mongodb://localhost/<databa
 Make sure the action you create on the [Google Actions Console](https://console.actions.google.com/u/0/) is of the type "Smart Home".
 
 ### Account linking
-Provide your CLIENT_ID and CLIENT_SECRET in their respective fields.
+Provide your `CLIENT_ID` and `CLIENT_SECRET` in their respective fields.
 
 Authorization url is `https://<url-to-server>/auth`.
 
